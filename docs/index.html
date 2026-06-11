@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DockToggle — Windows-style Dock switching for macOS</title>
+  <meta name="description" content="DockToggle brings familiar Windows taskbar behavior to your Mac. Click a Dock icon to hide the app — just like you've always done on Windows.">
+
+  <!-- Open Graph — covers Discord, Slack, WhatsApp, Telegram, iMessage, LinkedIn, Facebook, Reddit, Twitter/X -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://albert0ly.github.io/DockToggle-releases/">
+  <meta property="og:title"       content="DockToggle — Windows-style Dock switching for macOS">
+  <meta property="og:description" content="Click a Dock icon to hide the app. Click again to bring it back. Free macOS utility, Apple Silicon + Intel.">
+  <meta property="og:image"       content="https://albert0ly.github.io/DockToggle-releases/assets/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter/X card (falls back to OG if absent, but explicit is better) -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="DockToggle — Windows-style Dock switching for macOS">
+  <meta name="twitter:description" content="Click a Dock icon to hide the app. Click again to bring it back. Free macOS utility, Apple Silicon + Intel.">
+  <meta name="twitter:image"       content="https://albert0ly.github.io/DockToggle-releases/assets/og-image.png">
+
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon"     href="assets/icon.png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">
+        <img src="assets/icon.png" alt="DockToggle icon" class="nav-icon" onerror="this.style.display='none'">
+        DockToggle
+      </span>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/albert0ly/DockToggle-releases/releases" target="_blank" rel="noopener" class="nav-download">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Free · Universal Binary · macOS 12+</div>
+      <h1>Your Dock,<br>the way Windows does it.</h1>
+      <p class="hero-sub">Click an app's Dock icon to hide it. Click again to bring it back.<br>Exactly like the Windows taskbar you've used for decades.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/albert0ly/DockToggle-releases/releases/latest" class="btn-primary" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 1v9M4 7l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download Latest
+        </a>
+        <a href="https://github.com/albert0ly/DockToggle-releases" class="btn-ghost" target="_blank" rel="noopener">View Releases →</a>
+      </div>
+      <p class="hero-compat">
+        <span>Apple Silicon</span>
+        <span class="dot">·</span>
+        <span>Intel</span>
+        <span class="dot">·</span>
+        <span>macOS 12 Monterey and later</span>
+      </p>
+    </div>
+
+    <!-- Video / media -->
+    <div class="media-gallery" id="media">
+      <div class="media-frame">
+        <div class="screenshot-bar">
+          <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+        </div>
+        <!-- Option A: video (recommended) — drop an .mp4 into docs/assets/ and set the src -->
+        <!--
+        <video autoplay loop muted playsinline>
+          <source src="assets/demo.mp4" type="video/mp4">
+        </video>
+        -->
+        <!-- Option B: static screenshot -->
+        <!--
+        <img src="assets/screenshots/screen1.png" alt="DockToggle in action">
+        -->
+        <div class="screenshot-content placeholder">
+          <p>Add a demo video or screenshot here.<br>
+          Video: <code>assets/demo.mp4</code><br>
+          Image: <code>assets/screenshots/screen1.png</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-label">Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⌘</div>
+          <h3>Familiar behavior</h3>
+          <p>Clicking an active app's Dock icon hides it and restores focus to the previous application — just like Windows has always worked.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◻</div>
+          <h3>Lives in the menu bar</h3>
+          <p>DockToggle runs quietly as a menu bar utility. No Dock icon, no clutter. Enable and forget it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Zero latency</h3>
+          <p>Built with native macOS APIs. DockToggle intercepts Dock clicks at the system level with no noticeable overhead.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Privacy-first</h3>
+          <p>No analytics, no network access, no telemetry. DockToggle only uses the Accessibility permission it asks for — nothing more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚙︎</div>
+          <h3>Launch at login</h3>
+          <p>Set it once. DockToggle can start automatically with your Mac so the behavior is always there when you need it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍎</div>
+          <h3>Universal binary</h3>
+          <p>Native on both Apple Silicon and Intel Macs. One download, full performance on any hardware.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-label">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h3>Download & open</h3>
+            <p>Drag DockToggle to Applications, then open it. macOS will ask you to allow Accessibility access.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h3>Grant Accessibility permission</h3>
+            <p>DockToggle needs Accessibility access to intercept Dock clicks. Grant it in System Settings → Privacy & Security → Accessibility.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h3>Done</h3>
+            <p>Click any running app's Dock icon while it's focused — it hides. Click again — it comes back.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-label">FAQ</h2>
+      <div class="faq">
+
+        <details class="faq-item">
+          <summary>Why does macOS ask me to re-grant Accessibility permission after an update?</summary>
+          <p>macOS tracks permission grants by the app's binary signature. Because DockToggle is distributed without an Apple Developer certificate, macOS may treat a new version as a different app. If DockToggle already appears in your Accessibility list, toggle the switch off and back on — you won't need to remove and re-add it.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is DockToggle safe to use?</summary>
+          <p>Yes. DockToggle is unsigned, which means macOS shows a warning on first launch — this is standard for apps not distributed through the App Store or by a registered developer. The app makes no network connections and accesses only what the Accessibility permission grants.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why does it need Accessibility permission?</summary>
+          <p>The Accessibility API is the only supported way for a macOS app to observe and intercept Dock icon click events. DockToggle uses it solely for this purpose.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does it work on Apple Silicon?</summary>
+          <p>Yes. DockToggle is a universal binary — it runs natively on both M-series (Apple Silicon) and Intel Macs.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What macOS versions are supported?</summary>
+          <p>macOS 12 Monterey and later.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is this free?</summary>
+          <p>Yes, completely free. If you find it useful, a small donation helps keep it going — but there's no obligation.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="donate-section" id="donate">
+    <div class="container donate-inner">
+      <div>
+        <h2>Built by one person, for free.</h2>
+        <p>DockToggle is a small side project. If it saves you a moment of frustration every day, a coffee is always appreciated — but never expected.</p>
+      </div>
+      <a href="#" class="btn-donate" id="donate-btn">
+        <!-- Replace href with your actual donation link -->
+        ☕ Buy me a coffee
+      </a>
+    </div>
+    <p class="donate-note">Replace <code>#</code> in <code>index.html</code> with your actual donation URL (Buy Me a Coffee, PayPal, GitHub Sponsors, etc.)</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">DockToggle</span>
+      <nav class="footer-links">
+        <a href="https://github.com/albert0ly/DockToggle-releases/releases/latest" target="_blank" rel="noopener">Download</a>
+        <a href="https://github.com/albert0ly/DockToggle-releases/releases" target="_blank" rel="noopener">Changelog</a>
+        <a href="https://github.com/albert0ly/DockToggle-releases/issues" target="_blank" rel="noopener">Report a bug</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <span class="footer-copy">Free · Unsigned · No telemetry</span>
+    </div>
+  </footer>
+
+</body>
+</html>
