@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloading DockToggle...</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: linear-gradient(180deg, #f5f7fb 0%, #eef3ff 100%);
+      color: #1d1d1f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(180deg, #0a0f1a 0%, #111827 100%);
+        color: #f5f5f7;
+      }
+    }
+
+    .download-shell {
+      width: min(100%, 640px);
+      padding: 40px 32px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.14);
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .download-shell {
+        background: rgba(17, 24, 39, 0.92);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
+      }
+    }
+
+    .download-shell h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: -0.03em;
+    }
+
+    .download-shell p {
+      margin: 0;
+      color: #5f6470;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .download-shell p {
+        color: #c4c7cf;
+      }
+    }
+
+    .download-actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .download-note {
+      margin-top: 18px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main class="download-shell">
+    <h1>Your download is starting...</h1>
+    <p>DockToggle.dmg should begin downloading automatically. You will be redirected to the installation instructions in a moment.</p>
+    <div class="download-actions">
+      <a class="btn-primary" href="https://github.com/albert0ly/DockToggle-releases/releases/latest/download/DockToggle.dmg">Download manually</a>
+      <a class="btn-ghost" href="https://github.com/albert0ly/DockToggle-releases/releases" target="_blank" rel="noopener">View releases</a>
+    </div>
+    <p class="download-note">If the automatic download is blocked, use the manual download button above.</p>
+  </main>
+
+  <script>
+    (function () {
+      var downloadUrl = 'https://github.com/albert0ly/DockToggle-releases/releases/latest/download/DockToggle.dmg';
+      var nextPage = 'thanks.html?mode=thanks';
+      var link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = 'DockToggle.dmg';
+      link.rel = 'noopener';
+      document.body.appendChild(link);
+      link.click();
+
+      setTimeout(function () {
+        window.location.href = nextPage;
+      }, 900);
+    }());
+  </script>
+</body>
+</html>
