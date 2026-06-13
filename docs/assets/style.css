@@ -442,6 +442,10 @@ nav {
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.15s, transform 0.1s, background 0.15s;
 }
+.btn-donate-icon {
+  flex-shrink: 0;
+  display: block;
+}
 .btn-donate:hover {
   box-shadow: var(--shadow-md);
   color: var(--text);
